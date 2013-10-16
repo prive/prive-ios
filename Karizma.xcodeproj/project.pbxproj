@@ -6,6 +6,20 @@
 	objectVersion = 46;
 	objects = {
 
+/* Begin PBXAggregateTarget section */
+		11BDB43B180F03E40012A05C /* mogenerator */ = {
+			isa = PBXAggregateTarget;
+			buildConfigurationList = 11BDB43C180F03E40012A05C /* Build configuration list for PBXAggregateTarget "mogenerator" */;
+			buildPhases = (
+				11BDB43F180F03EC0012A05C /* ShellScript */,
+			);
+			dependencies = (
+			);
+			name = mogenerator;
+			productName = mogenerator;
+		};
+/* End PBXAggregateTarget section */
+
 /* Begin PBXBuildFile section */
 		11BDB400180EF8340012A05C /* UIKit.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11BDB3FF180EF8340012A05C /* UIKit.framework */; };
 		11BDB402180EF8340012A05C /* Foundation.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 11BDB401180EF8340012A05C /* Foundation.framework */; };
@@ -14,13 +28,15 @@
 		11BDB40C180EF8340012A05C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11BDB40A180EF8340012A05C /* InfoPlist.strings */; };
 		11BDB40E180EF8340012A05C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BDB40D180EF8340012A05C /* main.m */; };
 		11BDB412180EF8340012A05C /* CTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BDB411180EF8340012A05C /* CTAppDelegate.m */; };
-		11BDB41B180EF8340012A05C /* Karizma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11BDB419180EF8340012A05C /* Karizma.xcdatamodeld */; };
 		11BDB427180EFE250012A05C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11BDB424180EFE250012A05C /* Default-568h@2x.png */; };
 		11BDB428180EFE250012A05C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 11BDB425180EFE250012A05C /* Default.png */; };
 		11BDB429180EFE250012A05C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11BDB426180EFE250012A05C /* Default@2x.png */; };
 		11BDB42E180EFE8A0012A05C /* CTBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BDB42D180EFE8A0012A05C /* CTBaseController.m */; };
 		11BDB433180EFF320012A05C /* CTChatController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BDB431180EFF320012A05C /* CTChatController.m */; };
 		11BDB434180EFF320012A05C /* CTChatController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BDB432180EFF320012A05C /* CTChatController.xib */; };
+		11BDB43A180F03600012A05C /* Karizma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11BDB437180F03600012A05C /* Karizma.xcdatamodeld */; };
+		11BDB445180F04790012A05C /* CTBOBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BDB441180F04790012A05C /* CTBOBase.m */; };
+		11BDB446180F04790012A05C /* _CTBOBase.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BDB444180F04790012A05C /* _CTBOBase.m */; };
 		3761BD9147344605AFAAE409 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE25D06C4B94F4EBB49193C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -36,7 +52,6 @@
 		11BDB40F180EF8340012A05C /* Karizma-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Karizma-Prefix.pch"; sourceTree = "<group>"; };
 		11BDB410180EF8340012A05C /* CTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAppDelegate.h; sourceTree = "<group>"; };
 		11BDB411180EF8340012A05C /* CTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAppDelegate.m; sourceTree = "<group>"; };
-		11BDB41A180EF8340012A05C /* Karizma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Karizma.xcdatamodel; sourceTree = "<group>"; };
 		11BDB424180EFE250012A05C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		11BDB425180EFE250012A05C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
 		11BDB426180EFE250012A05C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
@@ -45,6 +60,12 @@
 		11BDB430180EFF320012A05C /* CTChatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTChatController.h; sourceTree = "<group>"; };
 		11BDB431180EFF320012A05C /* CTChatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTChatController.m; sourceTree = "<group>"; };
 		11BDB432180EFF320012A05C /* CTChatController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTChatController.xib; sourceTree = "<group>"; };
+		11BDB435180F02A70012A05C /* Defines.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = Defines.h; sourceTree = "<group>"; };
+		11BDB438180F03600012A05C /* Karizma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Karizma.xcdatamodel; sourceTree = "<group>"; };
+		11BDB440180F04790012A05C /* CTBOBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBOBase.h; sourceTree = "<group>"; };
+		11BDB441180F04790012A05C /* CTBOBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBOBase.m; sourceTree = "<group>"; };
+		11BDB443180F04790012A05C /* _CTBOBase.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = _CTBOBase.h; sourceTree = "<group>"; };
+		11BDB444180F04790012A05C /* _CTBOBase.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = _CTBOBase.m; sourceTree = "<group>"; };
 		5FE25D06C4B94F4EBB49193C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EEDFE40F94C4C58B452BBAC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -100,7 +121,7 @@
 			children = (
 				11BDB410180EF8340012A05C /* CTAppDelegate.h */,
 				11BDB411180EF8340012A05C /* CTAppDelegate.m */,
-				11BDB419180EF8340012A05C /* Karizma.xcdatamodeld */,
+				11BDB436180F03600012A05C /* CoreData */,
 				11BDB42A180EFE770012A05C /* GUI */,
 				11BDB408180EF8340012A05C /* Supporting Files */,
 				11BDB421180EFE250012A05C /* Resources */,
@@ -115,6 +136,7 @@
 				11BDB40A180EF8340012A05C /* InfoPlist.strings */,
 				11BDB40D180EF8340012A05C /* main.m */,
 				11BDB40F180EF8340012A05C /* Karizma-Prefix.pch */,
+				11BDB435180F02A70012A05C /* Defines.h */,
 			);
 			name = "Supporting Files";
 			sourceTree = "<group>";
@@ -173,6 +195,34 @@
 			path = Chat;
 			sourceTree = "<group>";
 		};
+		11BDB436180F03600012A05C /* CoreData */ = {
+			isa = PBXGroup;
+			children = (
+				11BDB439180F03600012A05C /* Models */,
+				11BDB437180F03600012A05C /* Karizma.xcdatamodeld */,
+			);
+			path = CoreData;
+			sourceTree = "<group>";
+		};
+		11BDB439180F03600012A05C /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				11BDB440180F04790012A05C /* CTBOBase.h */,
+				11BDB441180F04790012A05C /* CTBOBase.m */,
+				11BDB442180F04790012A05C /* RAW */,
+			);
+			path = Models;
+			sourceTree = "<group>";
+		};
+		11BDB442180F04790012A05C /* RAW */ = {
+			isa = PBXGroup;
+			children = (
+				11BDB443180F04790012A05C /* _CTBOBase.h */,
+				11BDB444180F04790012A05C /* _CTBOBase.m */,
+			);
+			path = RAW;
+			sourceTree = "<group>";
+		};
 /* End PBXGroup section */
 
 /* Begin PBXNativeTarget section */
@@ -218,6 +268,7 @@
 			projectRoot = "";
 			targets = (
 				11BDB3FB180EF8340012A05C /* Karizma */,
+				11BDB43B180F03E40012A05C /* mogenerator */,
 			);
 		};
 /* End PBXProject section */
@@ -238,6 +289,19 @@
 /* End PBXResourcesBuildPhase section */
 
 /* Begin PBXShellScriptBuildPhase section */
+		11BDB43F180F03EC0012A05C /* ShellScript */ = {
+			isa = PBXShellScriptBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			inputPaths = (
+			);
+			outputPaths = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+			shellPath = /bin/sh;
+			shellScript = "cd Karizma/CoreData\nmogenerator --machine-dir \"./Models/RAW\" --human-dir \"./Models\" --includeh Models.h --template-var arc=true -m ./Karizma.xcdatamodeld/Karizma.xcdatamodel";
+		};
 		7B1A3D6EF8624D1094B349BD /* Copy Pods Resources */ = {
 			isa = PBXShellScriptBuildPhase;
 			buildActionMask = 2147483647;
@@ -277,9 +341,11 @@
 			files = (
 				11BDB40E180EF8340012A05C /* main.m in Sources */,
 				11BDB412180EF8340012A05C /* CTAppDelegate.m in Sources */,
-				11BDB41B180EF8340012A05C /* Karizma.xcdatamodeld in Sources */,
 				11BDB42E180EFE8A0012A05C /* CTBaseController.m in Sources */,
 				11BDB433180EFF320012A05C /* CTChatController.m in Sources */,
+				11BDB43A180F03600012A05C /* Karizma.xcdatamodeld in Sources */,
+				11BDB445180F04790012A05C /* CTBOBase.m in Sources */,
+				11BDB446180F04790012A05C /* _CTBOBase.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -379,6 +445,20 @@
 			};
 			name = Release;
 		};
+		11BDB43D180F03E40012A05C /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Debug;
+		};
+		11BDB43E180F03E40012A05C /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				PRODUCT_NAME = "$(TARGET_NAME)";
+			};
+			name = Release;
+		};
 /* End XCBuildConfiguration section */
 
 /* Begin XCConfigurationList section */
@@ -400,15 +480,23 @@
 			defaultConfigurationIsVisible = 0;
 			defaultConfigurationName = Release;
 		};
+		11BDB43C180F03E40012A05C /* Build configuration list for PBXAggregateTarget "mogenerator" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				11BDB43D180F03E40012A05C /* Debug */,
+				11BDB43E180F03E40012A05C /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+		};
 /* End XCConfigurationList section */
 
 /* Begin XCVersionGroup section */
-		11BDB419180EF8340012A05C /* Karizma.xcdatamodeld */ = {
+		11BDB437180F03600012A05C /* Karizma.xcdatamodeld */ = {
 			isa = XCVersionGroup;
 			children = (
-				11BDB41A180EF8340012A05C /* Karizma.xcdatamodel */,
+				11BDB438180F03600012A05C /* Karizma.xcdatamodel */,
 			);
-			currentVersion = 11BDB41A180EF8340012A05C /* Karizma.xcdatamodel */;
+			currentVersion = 11BDB438180F03600012A05C /* Karizma.xcdatamodel */;
 			path = Karizma.xcdatamodeld;
 			sourceTree = "<group>";
 			versionGroupType = wrapper.xcdatamodel;
