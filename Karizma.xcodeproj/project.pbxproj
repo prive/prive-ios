@@ -14,10 +14,13 @@
 		11BDB40C180EF8340012A05C /* InfoPlist.strings in Resources */ = {isa = PBXBuildFile; fileRef = 11BDB40A180EF8340012A05C /* InfoPlist.strings */; };
 		11BDB40E180EF8340012A05C /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BDB40D180EF8340012A05C /* main.m */; };
 		11BDB412180EF8340012A05C /* CTAppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BDB411180EF8340012A05C /* CTAppDelegate.m */; };
-		11BDB414180EF8340012A05C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 11BDB413180EF8340012A05C /* Default.png */; };
-		11BDB416180EF8340012A05C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11BDB415180EF8340012A05C /* Default@2x.png */; };
-		11BDB418180EF8340012A05C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11BDB417180EF8340012A05C /* Default-568h@2x.png */; };
 		11BDB41B180EF8340012A05C /* Karizma.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 11BDB419180EF8340012A05C /* Karizma.xcdatamodeld */; };
+		11BDB427180EFE250012A05C /* Default-568h@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11BDB424180EFE250012A05C /* Default-568h@2x.png */; };
+		11BDB428180EFE250012A05C /* Default.png in Resources */ = {isa = PBXBuildFile; fileRef = 11BDB425180EFE250012A05C /* Default.png */; };
+		11BDB429180EFE250012A05C /* Default@2x.png in Resources */ = {isa = PBXBuildFile; fileRef = 11BDB426180EFE250012A05C /* Default@2x.png */; };
+		11BDB42E180EFE8A0012A05C /* CTBaseController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BDB42D180EFE8A0012A05C /* CTBaseController.m */; };
+		11BDB433180EFF320012A05C /* CTChatController.m in Sources */ = {isa = PBXBuildFile; fileRef = 11BDB431180EFF320012A05C /* CTChatController.m */; };
+		11BDB434180EFF320012A05C /* CTChatController.xib in Resources */ = {isa = PBXBuildFile; fileRef = 11BDB432180EFF320012A05C /* CTChatController.xib */; };
 		3761BD9147344605AFAAE409 /* libPods.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5FE25D06C4B94F4EBB49193C /* libPods.a */; };
 /* End PBXBuildFile section */
 
@@ -33,10 +36,15 @@
 		11BDB40F180EF8340012A05C /* Karizma-Prefix.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "Karizma-Prefix.pch"; sourceTree = "<group>"; };
 		11BDB410180EF8340012A05C /* CTAppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = CTAppDelegate.h; sourceTree = "<group>"; };
 		11BDB411180EF8340012A05C /* CTAppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = CTAppDelegate.m; sourceTree = "<group>"; };
-		11BDB413180EF8340012A05C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
-		11BDB415180EF8340012A05C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
-		11BDB417180EF8340012A05C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
 		11BDB41A180EF8340012A05C /* Karizma.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = Karizma.xcdatamodel; sourceTree = "<group>"; };
+		11BDB424180EFE250012A05C /* Default-568h@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default-568h@2x.png"; sourceTree = "<group>"; };
+		11BDB425180EFE250012A05C /* Default.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = Default.png; sourceTree = "<group>"; };
+		11BDB426180EFE250012A05C /* Default@2x.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Default@2x.png"; sourceTree = "<group>"; };
+		11BDB42C180EFE8A0012A05C /* CTBaseController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBaseController.h; sourceTree = "<group>"; };
+		11BDB42D180EFE8A0012A05C /* CTBaseController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBaseController.m; sourceTree = "<group>"; };
+		11BDB430180EFF320012A05C /* CTChatController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTChatController.h; sourceTree = "<group>"; };
+		11BDB431180EFF320012A05C /* CTChatController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTChatController.m; sourceTree = "<group>"; };
+		11BDB432180EFF320012A05C /* CTChatController.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = CTChatController.xib; sourceTree = "<group>"; };
 		5FE25D06C4B94F4EBB49193C /* libPods.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = libPods.a; sourceTree = BUILT_PRODUCTS_DIR; };
 		7EEDFE40F94C4C58B452BBAC /* Pods.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = Pods.xcconfig; path = Pods/Pods.xcconfig; sourceTree = "<group>"; };
 /* End PBXFileReference section */
@@ -93,7 +101,9 @@
 				11BDB410180EF8340012A05C /* CTAppDelegate.h */,
 				11BDB411180EF8340012A05C /* CTAppDelegate.m */,
 				11BDB419180EF8340012A05C /* Karizma.xcdatamodeld */,
+				11BDB42A180EFE770012A05C /* GUI */,
 				11BDB408180EF8340012A05C /* Supporting Files */,
+				11BDB421180EFE250012A05C /* Resources */,
 			);
 			path = Karizma;
 			sourceTree = "<group>";
@@ -105,11 +115,62 @@
 				11BDB40A180EF8340012A05C /* InfoPlist.strings */,
 				11BDB40D180EF8340012A05C /* main.m */,
 				11BDB40F180EF8340012A05C /* Karizma-Prefix.pch */,
-				11BDB413180EF8340012A05C /* Default.png */,
-				11BDB415180EF8340012A05C /* Default@2x.png */,
-				11BDB417180EF8340012A05C /* Default-568h@2x.png */,
 			);
 			name = "Supporting Files";
+			sourceTree = "<group>";
+		};
+		11BDB421180EFE250012A05C /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				11BDB422180EFE250012A05C /* Graphics */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		11BDB422180EFE250012A05C /* Graphics */ = {
+			isa = PBXGroup;
+			children = (
+				11BDB423180EFE250012A05C /* Splash */,
+			);
+			path = Graphics;
+			sourceTree = "<group>";
+		};
+		11BDB423180EFE250012A05C /* Splash */ = {
+			isa = PBXGroup;
+			children = (
+				11BDB424180EFE250012A05C /* Default-568h@2x.png */,
+				11BDB425180EFE250012A05C /* Default.png */,
+				11BDB426180EFE250012A05C /* Default@2x.png */,
+			);
+			path = Splash;
+			sourceTree = "<group>";
+		};
+		11BDB42A180EFE770012A05C /* GUI */ = {
+			isa = PBXGroup;
+			children = (
+				11BDB42B180EFE770012A05C /* Base */,
+				11BDB42F180EFE9E0012A05C /* Chat */,
+			);
+			path = GUI;
+			sourceTree = "<group>";
+		};
+		11BDB42B180EFE770012A05C /* Base */ = {
+			isa = PBXGroup;
+			children = (
+				11BDB42C180EFE8A0012A05C /* CTBaseController.h */,
+				11BDB42D180EFE8A0012A05C /* CTBaseController.m */,
+			);
+			path = Base;
+			sourceTree = "<group>";
+		};
+		11BDB42F180EFE9E0012A05C /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				11BDB430180EFF320012A05C /* CTChatController.h */,
+				11BDB431180EFF320012A05C /* CTChatController.m */,
+				11BDB432180EFF320012A05C /* CTChatController.xib */,
+			);
+			path = Chat;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -167,9 +228,10 @@
 			buildActionMask = 2147483647;
 			files = (
 				11BDB40C180EF8340012A05C /* InfoPlist.strings in Resources */,
-				11BDB414180EF8340012A05C /* Default.png in Resources */,
-				11BDB416180EF8340012A05C /* Default@2x.png in Resources */,
-				11BDB418180EF8340012A05C /* Default-568h@2x.png in Resources */,
+				11BDB427180EFE250012A05C /* Default-568h@2x.png in Resources */,
+				11BDB428180EFE250012A05C /* Default.png in Resources */,
+				11BDB429180EFE250012A05C /* Default@2x.png in Resources */,
+				11BDB434180EFF320012A05C /* CTChatController.xib in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -216,6 +278,8 @@
 				11BDB40E180EF8340012A05C /* main.m in Sources */,
 				11BDB412180EF8340012A05C /* CTAppDelegate.m in Sources */,
 				11BDB41B180EF8340012A05C /* Karizma.xcdatamodeld in Sources */,
+				11BDB42E180EFE8A0012A05C /* CTBaseController.m in Sources */,
+				11BDB433180EFF320012A05C /* CTChatController.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
