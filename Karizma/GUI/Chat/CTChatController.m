@@ -8,7 +8,16 @@
 
 #import "CTChatController.h"
 
+#define kCTTestUser1JID @"test1@priveim.com"
+#define kCTTestUser1Password @"123"
+
+#define kCTTestUser2JID @"test2@priveim.com"
+#define kCTTestUser2Password @"123"
+
 @interface CTChatController ()
+{
+    
+}
 
 @end
 
@@ -24,10 +33,31 @@
     return self;
 }
 
+#pragma  mark - View lifecycle
+
 - (void)viewDidLoad
 {
     [super viewDidLoad];
 }
 
+
+- (void)viewDidUnload
+{
+    testUserSegmentedControl = nil;
+    inputTextField = nil;
+    lastMessagesTextView = nil;
+    [super viewDidUnload];
+}
+
+#pragma mark - Actions
+
+- (IBAction)segmentedControlValueChanged:(id)sender
+{
+    
+}
+
+- (IBAction)sendButtonPressed:(id)sender
+{
+}
 
 @end

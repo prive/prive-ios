@@ -9,5 +9,10 @@
 #import "CTBaseController.h"
 
 @interface CTChatController : CTBaseController
+{
+    __weak IBOutlet UISegmentedControl *testUserSegmentedControl;
+    __weak IBOutlet UITextField *inputTextField;
+    __weak IBOutlet UITextView *lastMessagesTextView;
+}
 
 @end
