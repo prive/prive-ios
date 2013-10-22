@@ -120,7 +120,13 @@
 
 - (void)xmppChat:(CTXMPPChat *)aXmppChat didReceiveMessage:(CTBOChatTextMessage *)aMessage
 {
-    lastMessagesTextView.text = [NSString stringWithFormat:@"%@\n%@", aMessage.messageText, lastMessagesTextView.text];
+    lastMessagesTextView.text = [NSString stringWithFormat:@"Received: %@\n%@", aMessage.messageText, lastMessagesTextView.text];
+    [lastMessagesTextView scrollRectToVisible:CGRectMake(0, 0, lastMessagesTextView.frame.size.width, 20) animated:YES];
+}
+
+- (void)xmppChat:(CTXMPPChat *)aXmppChat didSendMessage:(CTBOChatTextMessage *)aMessage
+{
+    lastMessagesTextView.text = [NSString stringWithFormat:@"Sent: %@\n%@", aMessage.messageText, lastMessagesTextView.text];
     [lastMessagesTextView scrollRectToVisible:CGRectMake(0, 0, lastMessagesTextView.frame.size.width, 20) animated:YES];
 }
 
