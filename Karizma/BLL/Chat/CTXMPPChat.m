@@ -40,6 +40,11 @@
     [self closeXMPPStream];
 }
 
++ (XMPPJID *)xmppJIDFromString:(NSString *)aJIDString
+{
+    return [XMPPJID jidWithString:aJIDString];
+}
+
 #pragma mark - delegate
 
 - (void)addDelegate:(id)delegate delegateQueue:(dispatch_queue_t)delegateQueue
@@ -85,7 +90,7 @@
     NSParameterAssert(aJID);
     NSParameterAssert(aPassword);
         
-    userJID = [XMPPJID jidWithString:aJID];
+    userJID = [self.class xmppJIDFromString:aJID];
     
 	[xmppStream setMyJID:userJID];
 	userPassword = [aPassword copy];
@@ -143,6 +148,8 @@
 - (void)xmppStreamDidAuthenticate:(XMPPStream *)sender
 {
 	DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
+    
+    [self goOnline];
 }
 
 - (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(DDXMLElement *)error
@@ -183,6 +190,17 @@
     {
         [multicastDelegate xmppChat:self didReceiveMessage:message];
     }
+}
+
+- (void)xmppStream:(XMPPStream *)sender didSendMessage:(XMPPMessage *)aMessage
+{
+    CTBOChatMessage* message = nil;
+    if([aMessage isChatMessageWithBody])
+        message = [[CTBOChatTextMessage alloc] initFromXMPPMessage:aMessage];
+    else
+        message = [[CTBOChatMessage alloc] initFromXMPPMessage:aMessage];
+
+    [multicastDelegate xmppChat:self didSendMessage:message];
 }
 
 @end

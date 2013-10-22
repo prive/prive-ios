@@ -14,7 +14,7 @@
 
 @protocol CTXMPPChatDelegate;
 
-@interface CTXMPPChat : NSObject
+@interface CTXMPPChat : NSObject <XMPPStreamDelegate>
 {
     XMPPStream* xmppStream;
 	XMPPReconnect* xmppReconnect;
@@ -25,6 +25,8 @@
 }
 
 @property (nonatomic, readonly) XMPPStream* xmppStream;
+
++ (XMPPJID*)xmppJIDFromString:(NSString*)aJIDString;
 
 #pragma mark - delegate
 - (void)addDelegate:(id)delegate delegateQueue:(dispatch_queue_t)delegateQueue;
