@@ -8,7 +8,15 @@
 
 #import "CTXMPPChat.h"
 #import "CTBOChatTextMessage.h"
+
 #import "DDLog.h"
+#import "DDTTYLogger.h"
+
+#if DEBUG
+    static const int ddLogLevel = LOG_LEVEL_VERBOSE;
+#else
+    static const int ddLogLevel = LOG_LEVEL_INFO;
+#endif
 
 @implementation CTXMPPChat
 
@@ -74,7 +82,20 @@
     if(![xmppStream isDisconnected])
         return YES;
     
-
+    NSParameterAssert(aJID);
+    NSParameterAssert(aPassword);
+        
+    userJID = [XMPPJID jidWithString:aJID];
+    
+	[xmppStream setMyJID:userJID];
+	userPassword = [aPassword copy];
+    
+    NSError* error = nil;
+	if (![xmppStream connectWithTimeout:XMPPStreamTimeoutNone error:&error])
+    {
+        DDLogError(@"Error connecting: %@", error);
+        return NO;
+    }
 
     return YES;
 }
@@ -97,6 +118,54 @@
 {
     XMPPPresence* presence = [XMPPPresence presenceWithType:@"unavailable"];
     [xmppStream sendElement:presence];
+}
+
+#pragma mark - Messages
+
+- (void)sendMessage:(CTBOChatMessage *)aChatMessage
+{
+    XMPPMessage* xmppMessage = [aChatMessage toXMPPMessage];
+    [xmppStream sendElement:xmppMessage];
+}
+
+#pragma mark - XMPPStreamDelegate
+
+- (void)xmppStreamDidConnect:(XMPPStream *)sender
+{
+	DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
+    NSError* error = nil;
+    if(![xmppStream authenticateWithPassword:userPassword error:&error])
+    {
+		DDLogError(@"Error authenticating: %@", error);
+    }
+}
+
+- (void)xmppStreamDidAuthenticate:(XMPPStream *)sender
+{
+	DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
+}
+
+- (void)xmppStream:(XMPPStream *)sender didNotAuthenticate:(DDXMLElement *)error
+{
+	DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
+}
+
+- (void)xmppStream:(XMPPStream *)sender didReceiveError:(id)error
+{
+	DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
+}
+
+- (void)xmppStreamDidDisconnect:(XMPPStream *)sender withError:(NSError *)error
+{
+	DDLogVerbose(@"%@: %@", THIS_FILE, THIS_METHOD);
+}
+
+- (void)xmppStream:(XMPPStream *)sender didReceivePresence:(XMPPPresence *)presence
+{
+    if(![presence.from.user isEqualToString:sender.myJID.user])
+    {
+        DDLogInfo(@"Presence from current user: %@", presence.from.user);
+    }
 }
 
 @end

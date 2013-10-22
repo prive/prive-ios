@@ -35,7 +35,7 @@
 - (void)closeXMPPStream;
 
 #pragma mark - Connection
-- (BOOL)connectWithJID:(XMPPJID*)aJID password:(NSString*)aPassword;
+- (BOOL)connectWithJIDString:(NSString*)aJID password:(NSString*)aPassword;
 - (void)disconnect;
 
 #pragma mark - Presence
