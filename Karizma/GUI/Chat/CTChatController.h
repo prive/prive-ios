@@ -13,6 +13,8 @@
     __weak IBOutlet UISegmentedControl *testUserSegmentedControl;
     __weak IBOutlet UITextField *inputTextField;
     __weak IBOutlet UITextView *lastMessagesTextView;
+    
+    __weak IBOutlet UIButton *onlineButton;
 }
 
 @end

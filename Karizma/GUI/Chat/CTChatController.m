@@ -7,6 +7,7 @@
 //
 
 #import "CTChatController.h"
+#import "CTXMPPChat.h"
 
 #define kCTTestUser1JID @"test1@priveim.com"
 #define kCTTestUser1Password @"123"
@@ -16,7 +17,10 @@
 
 @interface CTChatController ()
 {
+    NSString* myJID;
+    NSString* recepientJID;
     
+    CTXMPPChat *xmppChat;
 }
 
 @end
@@ -28,7 +32,8 @@
     self = [super initWithNibName:@"CTChatController" bundle:nil];
     if (self)
     {
-        
+        xmppChat = [CTXMPPChat new];
+        [xmppChat addDelegate:self delegateQueue:dispatch_get_main_queue()];
     }
     return self;
 }
@@ -38,6 +43,7 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
+    
 }
 
 
@@ -46,10 +52,18 @@
     testUserSegmentedControl = nil;
     inputTextField = nil;
     lastMessagesTextView = nil;
+    onlineButton = nil;
     [super viewDidUnload];
 }
 
 #pragma mark - Actions
+
+- (IBAction)onlineButtonPressed:(id)sender
+{
+    onlineButton.selected = !onlineButton.selected;
+    testUserSegmentedControl.enabled = !onlineButton.selected;
+    
+}
 
 - (IBAction)segmentedControlValueChanged:(id)sender
 {
@@ -58,6 +72,18 @@
 
 - (IBAction)sendButtonPressed:(id)sender
 {
+    if (onlineButton.selected)
+    {
+        NSString *messageText = inputTextField.text;
+        messageText = [messageText stringByTrimmingCharactersInSet:[NSCharacterSet whitespaceAndNewlineCharacterSet]];
+        inputTextField.text = @"";
+        
+        [inputTextField resignFirstResponder];
+        
+        if(messageText.length)
+        {
+        }
+    }
 }
 
 @end

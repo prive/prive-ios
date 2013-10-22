@@ -168,4 +168,21 @@
     }
 }
 
+- (void)xmppStream:(XMPPStream *)sender didReceiveMessage:(XMPPMessage *)aMessage
+{
+    DDLogInfo(@"Received message: %@", aMessage);
+    
+    CTBOChatMessage* message = nil;
+    
+    if([aMessage isChatMessageWithBody])
+        message = [[CTBOChatTextMessage alloc] initFromXMPPMessage:aMessage];
+    else
+        message = [[CTBOChatMessage alloc] initFromXMPPMessage:aMessage];
+    
+    if (message)
+    {
+        [multicastDelegate xmppChat:self didReceiveMessage:message];
+    }
+}
+
 @end
