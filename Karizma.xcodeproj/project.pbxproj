@@ -21,6 +21,9 @@
 /* End PBXAggregateTarget section */
 
 /* Begin PBXBuildFile section */
+		111779D61816C93700639C88 /* CTXMPPChat.m in Sources */ = {isa = PBXBuildFile; fileRef = 111779D51816C93700639C88 /* CTXMPPChat.m */; };
+		111779DB1816C98900639C88 /* CTBOChatMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 111779DA1816C98900639C88 /* CTBOChatMessage.m */; };
+		111779DE1816CC9700639C88 /* CTBOChatTextMessage.m in Sources */ = {isa = PBXBuildFile; fileRef = 111779DD1816CC9700639C88 /* CTBOChatTextMessage.m */; };
 		113950441811E4CF00A30504 /* XMPPAnonymousAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 11394F081811E4CF00A30504 /* XMPPAnonymousAuthentication.m */; };
 		113950451811E4CF00A30504 /* XMPPDeprecatedDigestAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 11394F0B1811E4CF00A30504 /* XMPPDeprecatedDigestAuthentication.m */; };
 		113950461811E4CF00A30504 /* XMPPDeprecatedPlainAuthentication.m in Sources */ = {isa = PBXBuildFile; fileRef = 11394F0E1811E4CF00A30504 /* XMPPDeprecatedPlainAuthentication.m */; };
@@ -168,6 +171,12 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		111779D41816C93700639C88 /* CTXMPPChat.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTXMPPChat.h; sourceTree = "<group>"; };
+		111779D51816C93700639C88 /* CTXMPPChat.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTXMPPChat.m; sourceTree = "<group>"; };
+		111779D91816C98900639C88 /* CTBOChatMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBOChatMessage.h; sourceTree = "<group>"; };
+		111779DA1816C98900639C88 /* CTBOChatMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBOChatMessage.m; sourceTree = "<group>"; };
+		111779DC1816CC9700639C88 /* CTBOChatTextMessage.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CTBOChatTextMessage.h; sourceTree = "<group>"; };
+		111779DD1816CC9700639C88 /* CTBOChatTextMessage.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CTBOChatTextMessage.m; sourceTree = "<group>"; };
 		11394F071811E4CF00A30504 /* XMPPAnonymousAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPAnonymousAuthentication.h; sourceTree = "<group>"; };
 		11394F081811E4CF00A30504 /* XMPPAnonymousAuthentication.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XMPPAnonymousAuthentication.m; sourceTree = "<group>"; };
 		11394F0A1811E4CF00A30504 /* XMPPDeprecatedDigestAuthentication.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XMPPDeprecatedDigestAuthentication.h; sourceTree = "<group>"; };
@@ -477,6 +486,42 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		111779CF1816C2B000639C88 /* BLL */ = {
+			isa = PBXGroup;
+			children = (
+				111779D31816C93700639C88 /* Chat */,
+			);
+			path = BLL;
+			sourceTree = "<group>";
+		};
+		111779D31816C93700639C88 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				111779D41816C93700639C88 /* CTXMPPChat.h */,
+				111779D51816C93700639C88 /* CTXMPPChat.m */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
+		111779D71816C95F00639C88 /* BO */ = {
+			isa = PBXGroup;
+			children = (
+				111779D81816C95F00639C88 /* Chat */,
+			);
+			path = BO;
+			sourceTree = "<group>";
+		};
+		111779D81816C95F00639C88 /* Chat */ = {
+			isa = PBXGroup;
+			children = (
+				111779D91816C98900639C88 /* CTBOChatMessage.h */,
+				111779DA1816C98900639C88 /* CTBOChatMessage.m */,
+				111779DC1816CC9700639C88 /* CTBOChatTextMessage.h */,
+				111779DD1816CC9700639C88 /* CTBOChatTextMessage.m */,
+			);
+			path = Chat;
+			sourceTree = "<group>";
+		};
 		11394F041811E4CF00A30504 /* XMPPFramework */ = {
 			isa = PBXGroup;
 			children = (
@@ -1219,6 +1264,8 @@
 				11BDB410180EF8340012A05C /* CTAppDelegate.h */,
 				11BDB411180EF8340012A05C /* CTAppDelegate.m */,
 				11BDB436180F03600012A05C /* CoreData */,
+				111779D71816C95F00639C88 /* BO */,
+				111779CF1816C2B000639C88 /* BLL */,
 				11BDB42A180EFE770012A05C /* GUI */,
 				11BDB408180EF8340012A05C /* Supporting Files */,
 				11BDB421180EFE250012A05C /* Resources */,
@@ -1597,6 +1644,9 @@
 				11E89C3C1811EDA60073CCB1 /* DDXMLDocument.m in Sources */,
 				11E89C3D1811EDA60073CCB1 /* DDXMLElement.m in Sources */,
 				11E89C3E1811EDA60073CCB1 /* DDXMLNode.m in Sources */,
+				111779D61816C93700639C88 /* CTXMPPChat.m in Sources */,
+				111779DB1816C98900639C88 /* CTBOChatMessage.m in Sources */,
+				111779DE1816CC9700639C88 /* CTBOChatTextMessage.m in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
