@@ -1,4 +1,4 @@
 platform :ios, '5.0'
 
-pod 'CaigudaKit'
-pod 'XMPPFramework'
+pod 'PriveCaigudaKit'
+pod 'PriveXMPPFramework'
